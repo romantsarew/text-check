@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", function() {
+export function textOverflowCheck () {
+  document.addEventListener("DOMContentLoaded", function() {
   function replaceTextInAllElements(element, testText) {
       for (let node of element.childNodes) {
           if (node.nodeType === Node.TEXT_NODE && node.nodeValue.trim() !== '') {
@@ -13,3 +14,4 @@ document.addEventListener("DOMContentLoaded", function() {
 
   replaceTextInAllElements(document.body, testText);
 });
+}
